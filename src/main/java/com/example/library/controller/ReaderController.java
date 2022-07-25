@@ -21,7 +21,7 @@ public class ReaderController {
         return readerService.getReaderList();
     }
 
-    @PostMapping(value = "getReaderListById")
+    @PostMapping(value = "/getReaderListById")
     public Response<ResponseReader> getReaderListById(@RequestParam Long readerId) {
         return readerService.getReaderListById(readerId);
     }
@@ -37,8 +37,8 @@ public class ReaderController {
     }
 
     @PutMapping(value = "/deleteReader/{readerId}")
-    public ResponseStatusList deleteReader(@PathParam("readerId") Long readeerId) {
-        return readerService.deleteReader(readeerId);
+    public ResponseStatusList deleteReader(@PathParam("readerId") Long readerId) {
+        return readerService.deleteReader(readerId);
     }
 
 }
